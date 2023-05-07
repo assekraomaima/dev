@@ -1,0 +1,36 @@
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<br />
+<br />
+
+<div class="center-block" *ngIf="isLoading">
+  <div class="lds-dual-ring"></div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger alert-style font-family-lato" role="alert">
+    {{ errorMessage }}
+  </div>
+
+<div class="form-position" *ngIf="!isLoading">
+  <form [formGroup]="remoteForm">
+   
+    <div class="mb-3">
+      <label for="Date" class="form-label font-family-lato">Date</label>
+      
+      <input
+        type="Date"
+        class="form-control"
+        id="Date"
+        placeholder="enter Date"
+        formControlName="Date"
+      />
+      <div *ngIf="remoteForm.get('Date').invalid &&(remoteForm.get('Date').touched || isSubmit)" class="error-text font-family-lato">
+        Start Date is required
+      </div>
+    </div>
+    
+    
+
+    <button (click)="saveRemote()" type="submit" class="btn btn-primary font-family-lato">Submit</button>
+  </form>
+</div>

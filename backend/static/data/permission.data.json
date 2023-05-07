@@ -1,0 +1,251 @@
+[
+  {
+    "group": "PERMISSION_GROUP_MANAGE_USERS",
+    "name": "List",
+    "key": "PERMISSION_LIST_USERS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_USERS",
+    "name": "Add",
+    "key": "PERMISSION_ADD_USERS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_USERS",
+    "name": "Edit",
+    "key": "PERMISSION_EDIT_USERS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_USERS",
+    "name": "Delete",
+    "key": "PERMISSION_DELETE_USERS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_USERS",
+    "name": "Enable/Disable",
+    "key": "PERMISSION_USER_STATE_ENABLED"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_ROLES",
+    "name": "List",
+    "key": "PERMISSION_LIST_ROLES"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_ROLES",
+    "name": "Add",
+    "key": "PERMISSION_ADD_ROLES"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_ROLES",
+    "name": "Edit",
+    "key": "PERMISSION_EDIT_ROLES"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_ROLES",
+    "name": "Delete",
+    "key": "PERMISSION_DELETE_ROLES"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_DEPARTEMENTS",
+    "name": "List",
+    "key": "PERMISSION_LIST_DEPARTEMENTS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_DEPARTEMENTS",
+    "name": "Add",
+    "key": "PERMISSION_ADD_DEPARTEMENTS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_DEPARTEMENTS",
+    "name": "Edit",
+    "key": "PERMISSION_EDIT_DEPARTEMENTS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_DEPARTEMENTS",
+    "name": "Delete",
+    "key": "PERMISSION_DELETE_DEPARTEMENTS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_REMOTES",
+    "name": "List",
+    "key": "PERMISSION_LIST_REMOTES"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_REMOTES",
+    "name": "Add",
+    "key": "PERMISSION_ADD_REMOTES"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_REMOTES",
+    "name": "Edit",
+    "key": "PERMISSION_EDIT_REMOTES"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_REMOTES",
+    "name": "Delete",
+    "key": "PERMISSION_DELETE_REMOTES"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_REMOTES",
+    "name": "Accepted Remote",
+    "key": "PERMISSION_ACCEPTED_REMOTES"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_REMOTES",
+    "name": "Refused Remote",
+    "key": "PERMISSION_REFUSED_REMOTES"
+  }
+  ,
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MISSIONS",
+    "name": "List",
+    "key": "PERMISSION_LIST_MISSIONS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MISSIONS",
+    "name": "Add",
+    "key": "PERMISSION_ADD_MISSIONS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MISSIONS",
+    "name": "Edit",
+    "key": "PERMISSION_EDIT_MISSIONS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MISSIONS",
+    "name": "Delete",
+    "key": "PERMISSION_DELETE_MISSIONS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MISSIONS",
+    "name": "View",
+    "key": "PERMISSION_VIEW_MISSIONS"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_LEAVE_REQUEST",
+    "name": "List",
+    "key": "PERMISSION_LIST_LEAVE_REQUEST"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_LEAVE_REQUEST",
+    "name": "Add",
+    "key": "PERMISSION_ADD_LEAVE_REQUEST"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_LEAVE_REQUEST",
+    "name": "Edit",
+    "key": "PERMISSION_EDIT_LEAVE_REQUEST"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_LEAVE_REQUEST",
+    "name": "Delete",
+    "key": "PERMISSION_DELETE_LEAVE_REQUEST"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_LEAVE_REQUEST",
+    "name": "Accepted Demande",
+    "key": "PERMISSION_ACCEPTED_LEAVEREQUEST"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_LEAVE_REQUEST",
+    "name": "Refused Demande",
+    "key": "PERMISSION_REFUSED_LEAVEREQUEST"
+  },{
+    "group": "PERMISSION_GROUP_MANAGE_MATERIAL",
+    "name": "List",
+    "key": "PERMISSION_LIST_MATERIAL"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MATERIAL",
+    "name": "Add",
+    "key": "PERMISSION_ADD_MATERIAL"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MATERIAL",
+    "name": "Edit",
+    "key": "PERMISSION_EDIT_MATERIAL"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MATERIAL",
+    "name": "Delete",
+    "key": "PERMISSION_DELETE_MATERIAL"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MATERIAL",
+    "name": "Accepted Demande",
+    "key": "PERMISSION_ACCEPTED_MATERIAL"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_MATERIAL",
+    "name": "Refused Demande",
+    "key": "PERMISSION_REFUSED_MATERIAL"
+  },{
+    "group": "PERMISSION_GROUP_MANAGE_CAR",
+    "name": "List",
+    "key": "PERMISSION_LIST_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_CAR",
+    "name": "Add",
+    "key": "PERMISSION_ADD_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_CAR",
+    "name": "Edit",
+    "key": "PERMISSION_EDIT_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_CAR",
+    "name": "Delete",
+    "key": "PERMISSION_DELETE_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_CAR",
+    "name": "Accepted Demande",
+    "key": "PERMISSION_ACCEPTED_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_CAR",
+    "name": "Refused Demande",
+    "key": "PERMISSION_REFUSED_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_RESERVATION_CAR",
+    "name": "list ",
+    "key": "PERMISSION_LIST_RESERVATION_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_RESERVATION_CAR",
+    "name": "Add ",
+    "key": "PERMISSION_ADD_RESERVATION_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_RESERVATION_CAR",
+    "name": "Edit ",
+    "key": "PERMISSION_EDIT_RESERVATION_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_RESERVATION_CAR",
+    "name": "Delete ",
+    "key": "PERMISSION_DELETE_RESERVATION_CAR"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_RESERVATION_MATERIAL",
+    "name": "list ",
+    "key": "PERMISSION_LIST_RESERVATION_MATERIAL"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_RESERVATION_MATERIAL",
+    "name": "Add ",
+    "key": "PERMISSION_ADD_RESERVATION_MATERIAL"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_RESERVATION_MATERIAL",
+    "name": "Edit ",
+    "key": "PERMISSION_EDIT_RESERVATION_MATERIAL"
+  },
+  {
+    "group": "PERMISSION_GROUP_MANAGE_RESERVATION_MATERIAL",
+    "name": "Delete ",
+    "key": "PERMISSION_DELETE_RESERVATION_MATERIAL"
+  }
+]

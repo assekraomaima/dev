@@ -1,0 +1,60 @@
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<br />
+<br />
+
+<div class="center-block" *ngIf="isLoading">
+  <div class="lds-dual-ring"></div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger alert-style font-family-lato" role="alert">
+  {{ errorMessage }}
+</div>
+
+<div class="form-position" *ngIf="!isLoading">
+  <form [formGroup]="leaverequestForm">
+
+    <div class="mb-3">
+      <label for="startDate" class="form-label font-family-lato">Start Date</label>
+      <input type="Date" 
+      class="form-control" 
+      id="startDate" 
+      placeholder="enter Start Date"
+      formControlName="startDate" />
+      <div *ngIf="leaverequestForm.get('startDate').invalid &&(leaverequestForm.get('startDate').touched || isSubmit)"
+        class="error-text font-family-lato">
+        Start Date is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="endDate" class="form-label font-family-lato">End Date</label>
+      <input type="Date" 
+      class="form-control" 
+      id="endDate" 
+      placeholder="enter End Date" 
+      formControlName="endDate" />
+      <div *ngIf="leaverequestForm.get('endDate').invalid &&(leaverequestForm.get('endDate').touched || isSubmit)"
+        class="error-text font-family-lato">
+        End Date is required
+      </div>
+
+      <div class="">
+        <label for="type" class="form-label font-family-lato">type</label>
+        <ng-select 
+        class="font-family-lato" 
+        placeholder="Please choose type" 
+        formControlName="type">
+          <ng-option class="font-family-lato" *ngFor="let type of types" [value]="type">{{
+            type
+          }}</ng-option>
+        </ng-select>
+      </div>  
+    
+      <div class="mb-3">
+        <label for="type" class="form-label font-family-lato">Certificate</label>
+        <br>
+        <input type="file" formControlName="certificate" name="Certificate">
+      </div>
+
+      <button (click)="saveLeaverequest()" type="submit" class="btn btn-primary font-family-lato">Submit</button>
+    </div>

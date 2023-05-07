@@ -1,0 +1,119 @@
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<br />
+<br />
+
+<div class="center-block" *ngIf="isLoading">
+  <div class="lds-dual-ring"></div>
+</div>
+
+<div
+  *ngIf="errorMessage"
+  class="alert alert-danger alert-style font-family-lato"
+  role="alert"
+>
+  {{ errorMessage }}
+</div>
+<div class="form-position" *ngIf="!isLoading">
+  <form [formGroup]="reservationcarform">
+    <div class="mb-3">
+      <label for="StartDate" class="form-label font-family-lato"
+        >Start Date</label
+      >
+      <input
+        type="Date"
+        class="form-control"
+        id="StartDate"
+        placeholder="enter Start Date"
+        formControlName="StartDate"
+      />
+      <div
+        *ngIf="
+          reservationcarform.get('StartDate').invalid &&
+          (reservationcarform.get('StartDate').touched || isSubmit)
+        "
+        class="error-text font-family-lato"
+      >
+      Start Date is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="EndDate" class="form-label font-family-lato"
+        >End Date</label
+      >
+      <input
+        type="date"
+        class="form-control"
+        id="EndDate"
+        placeholder="enter End Date"
+        formControlName="EndDate"
+      />
+      <div
+        *ngIf="
+          reservationcarform.get('EndDate').invalid &&
+          (reservationcarform.get('EndDate').touched || isSubmit)
+        "
+        class="error-text font-family-lato"
+      >
+      End Date is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="type" class="form-label font-family-lato"
+        >Type</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="type"
+        placeholder="enter type"
+        formControlName="type"
+      />
+      <div
+        *ngIf="
+          reservationcarform.get('type').invalid &&
+          (reservationcarform.get('type').touched || isSubmit)
+        "
+        class="error-text font-family-lato"
+      >
+      type is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="car" class="form-label font-family-lato"
+        >Car</label
+      >
+      <ng-select
+        class="font-family-lato"
+        placeholder="Please choose Car"
+        formControlName="CarId"
+      >
+        <ng-option
+          class="font-family-lato"
+          *ngFor="let car of cars"
+          [value]="car.id"
+          >{{ car.marque }}</ng-option
+        >
+      </ng-select>
+      <div
+        *ngIf="
+          reservationcarform.get('CarId').invalid &&
+          (reservationcarform.get('CarId').touched || isSubmit)
+        "
+        class="error-text font-family-lato"
+      >
+        Car is required
+      </div>
+    </div>
+
+    
+    <button
+      (click)="saveReservationCar()"
+      type="submit"
+      class="btn btn-primary font-family-lato"
+    >
+      Submit
+    </button>
+  </form>
+</div>

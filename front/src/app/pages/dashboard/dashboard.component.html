@@ -1,0 +1,64 @@
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<div
+  *ngIf="errorMessage"
+  class="alert alert-danger alert-margin-top text-center alert-style font-family-lato"
+  role="alert"
+>
+  <span>{{ errorMessage }}</span>
+</div>
+
+<div
+  *ngIf="successMessage"
+  class="alert alert-success alert-margin-top text-center alert-style font-family-lato"
+  role="alert"
+>
+  <span>{{ successMessage }}</span>
+</div>
+
+<div class="row" style="margin: 20px 0px">
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div
+      style="
+        height: 100px;
+        border-radius: 15px;
+        background-color: rgb(68, 68, 230);
+      "
+    >
+      <span> users </span>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div
+      style="
+        height: 100px;
+        border-radius: 15px;
+        background-color: rgb(64, 181, 83);
+      "
+    >
+      <span> roles </span>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div
+      style="
+        height: 100px;
+        border-radius: 15px;
+        background-color: rgb(181, 189, 66);
+      "
+    >
+      <span> departements </span>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div
+      style="
+        height: 100px;
+        border-radius: 15px;
+        background-color: rgb(192, 82, 207);
+      "
+    >
+      <span> Car </span>
+    </div>
+  </div>
+</div>

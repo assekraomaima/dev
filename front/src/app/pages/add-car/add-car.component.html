@@ -1,0 +1,58 @@
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<br />
+<br />
+
+<div class="center-block" *ngIf="isLoading">
+  <div class="lds-dual-ring"></div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger alert-style font-family-lato" role="alert">
+    {{ errorMessage }}
+  </div>
+  <div class="form-position" *ngIf="!isLoading">
+    <form [formGroup]="carForm">
+      
+      <div class="mb-3">
+        <label for="marque" class="form-label font-family-lato"
+          >Marque </label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="marque"
+          placeholder="enter marque"
+          formControlName="marque"
+        />
+        <div
+          *ngIf="carForm.get('marque').invalid &&
+            (carForm.get('marque').touched || isSubmit)
+          "
+          class="error-text font-family-lato"
+        >
+          marque is required
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="matricule" class="form-label font-family-lato"
+          >Matricule</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="matricule"
+          placeholder="enter matricule"
+          formControlName="matricule"
+        />
+        <div
+          *ngIf="carForm.get('matricule').invalid &&
+            (carForm.get('matricule').touched || isSubmit)
+          "
+          class="error-text font-family-lato"
+        >
+          matricule is required
+        </div>
+      </div>
+    <button (click)="saveCar()" type="submit" class="btn btn-primary font-family-lato">Submit</button>
+  </form>
+</div>

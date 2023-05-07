@@ -1,0 +1,72 @@
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<br />
+<br />
+
+<div class="center-block" *ngIf="isLoading">
+  <div class="lds-dual-ring"></div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger alert-style font-family-lato" role="alert">
+    {{ errorMessage }}
+  </div>
+
+<div class="form-position" *ngIf="!isLoading">
+  <form [formGroup]="missionForm">
+    
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label font-family-lato">User</label>
+    <ng-select  [multiple] = "true" [(ngModel)]="selected"  class="font-family-lato" placeholder="Please choose user" formControlName="userId">
+      <ng-option class="font-family-lato" *ngFor="let user of users" [value]="user.id">{{
+        user.firstName+" "+user.lastName
+      }}</ng-option>
+    </ng-select>
+    <div *ngIf="missionForm.get('userId').invalid &&(missionForm.get('userId').touched || isSubmit)" class="error-text font-family-lato">
+      User is required
+    </div>
+  </div>
+  
+    <div class="mb-3">
+      <label for="startDate" class="form-label font-family-lato">Start Date</label>
+      <input
+        type="Date"
+        class="form-control"
+        id="startDate"
+        placeholder="enter Start Date"
+        formControlName="startDate"
+      />
+      <div *ngIf="missionForm.get('startDate').invalid &&(missionForm.get('startDate').touched || isSubmit)" class="error-text font-family-lato">
+        Start Date is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="endDate" class="form-label font-family-lato">End Date</label>
+      <input
+        type="Date"
+        class="form-control"
+        id="endDate"
+        placeholder="enter End Date"
+        formControlName="endDate"
+      />
+      <div *ngIf="missionForm.get('endDate').invalid &&(missionForm.get('endDate').touched || isSubmit)" class="error-text font-family-lato">
+        End Date is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label font-family-lato">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        placeholder="enter Description"
+        formControlName="description"
+      />
+      <div *ngIf="missionForm.get('description').invalid &&(missionForm.get('description').touched || isSubmit)" class="error-text font-family-lato">
+        Description is required
+      </div>
+    </div>
+    
+
+    <button (click)="saveMission()" type="submit" class="btn btn-primary font-family-lato">Submit</button>
+  </form>
+</div>

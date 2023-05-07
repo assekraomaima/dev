@@ -1,0 +1,32 @@
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<br />
+<br />
+
+<div class="center-block" *ngIf="isLoading">
+  <div class="lds-dual-ring"></div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger alert-style font-family-lato" role="alert">
+    {{ errorMessage }}
+  </div>
+
+<div class="form-position" *ngIf="!isLoading">
+  <form [formGroup]="materialForm">
+    <div class="mb-3">
+      <label for="name" class="form-label font-family-lato">Material Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="enter Material Name"
+        formControlName="name"
+      />
+      <div *ngIf=" materialForm.get('name').invalid &&(materialForm.get('name').touched || isSubmit)" class="error-text font-family-lato">
+        material name is required
+      </div>
+    </div>
+    
+    <button (click)="saveMaterial()" type="submit" class="btn btn-primary font-family-lato">Submit</button>
+  </form>
+</div>

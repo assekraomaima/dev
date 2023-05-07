@@ -1,0 +1,27 @@
+<div class="header bg-gradient-success pt-md-7"></div>
+
+<br />
+
+<div class="center-block" *ngIf="isLoading">
+  <div class="lds-dual-ring"></div>
+</div>
+<div class="content">
+   <div class="row">
+     <div class="col-12">
+      <form [formGroup]="form" class="form-group">
+        <label for="select-input">Select Remote Request Status:</label>
+        <select id="select-input" formControlName="remoteRequestResponse" class="form-control">
+          <option value="Refused">Refused</option>
+          <option value="Accepted">Accepted</option>
+        </select>
+        
+        <label for="textarea-input">Enter why request is refused:</label>
+        <textarea class="form-control" formControlName="reason" id="textarea-input"></textarea>
+      
+        <button class="btn btn-primary" (click)="submitForm()">Submit</button>
+      </form>
+      
+
+     </div>
+   </div>
+</div>
